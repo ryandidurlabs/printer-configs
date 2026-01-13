@@ -1,0 +1,33 @@
+# Backup files
+*.backup
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+temp/
+
+# Python cache (if any scripts use Python)
+__pycache__/
+*.pyc
+*.pyo
+
+# Local overrides (if you want to keep local changes separate)
+local.cfg
+local_overrides.cfg
