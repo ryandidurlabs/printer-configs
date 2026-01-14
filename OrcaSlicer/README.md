@@ -1,0 +1,111 @@
+# OrcaSlicer Configuration for CR-10S Printers
+
+This directory contains OrcaSlicer printer profiles for both modified CR-10S printers.
+
+## Printer Specifications
+
+Both printers are modified Creality CR-10S with:
+- **Direct Drive Extruder**: Creality Sprite Extruder Pro
+- **Nozzle**: 0.8mm
+- **Bed Size**: 300x300mm
+- **Max Height**: 400mm
+- **Firmware**: Klipper with MainsailOS
+- **Max Speed**: 300mm/s
+- **Max Acceleration**: 3000mm/s²
+
+## Installation Instructions
+
+### Method 1: Import via OrcaSlicer UI (Recommended)
+
+1. Open OrcaSlicer
+2. Go to **Printer** → **Add Printer** → **Add**
+3. Click **Import** button
+4. Navigate to this `OrcaSlicer` folder
+5. Select `Printer-1.json` or `Printer-2.json`
+6. Click **Open**
+7. Repeat for the second printer
+
+### Method 2: Manual Copy (Advanced)
+
+1. Close OrcaSlicer if it's running
+2. Navigate to OrcaSlicer config directory:
+   - **Windows**: `%APPDATA%\OrcaSlicer\resources\profiles\`
+   - **macOS**: `~/Library/Application Support/OrcaSlicer/resources/profiles/`
+   - **Linux**: `~/.config/OrcaSlicer/resources/profiles/`
+3. Copy the JSON files to the appropriate subdirectories:
+   - `Printer-1.json` → `machine/` folder
+   - `Printer-2.json` → `machine/` folder
+   - `0.8mm_Printer-1.json` → `process/` folder
+   - `0.8mm_Printer-2.json` → `process/` folder
+4. Restart OrcaSlicer
+
+## Configuring Mainsail Connection
+
+After importing the printer profiles:
+
+1. In OrcaSlicer, select your printer
+2. Go to **Printer** → **Printer Settings** → **Machine** tab
+3. Scroll to **Host** section
+4. Set **Host Type** to `Mainsail`
+5. Enter the IP address:
+   - **Printer 1**: `10.1.51.31`
+   - **Printer 2**: `10.1.51.32`
+6. Port should be `7125` (default Mainsail port)
+7. Click **Test Connection** to verify
+
+## Print Settings
+
+The profiles are optimized for 0.8mm nozzle with:
+- **Layer Height**: 0.4mm (can be adjusted 0.16-0.64mm)
+- **Line Width**: 0.8mm
+- **Wall Loops**: 2
+- **Infill**: 15% (adjustable)
+- **Print Speed**: 60-80mm/s (walls), 200mm/s (travel)
+- **Acceleration**: 1000-3000mm/s²
+
+## Custom G-code Macros
+
+The profiles use your Klipper macros:
+- **Start Print**: `START_PRINT` (with bed and extruder temp parameters)
+- **End Print**: `END_PRINT`
+- **Pause**: `PAUSE`
+- **Resume**: `RESUME`
+
+These macros handle:
+- Bed mesh calibration/loading
+- Preheating
+- Safe parking
+- Cooldown
+
+## Tips
+
+1. **First Print**: Start with a simple test cube to verify settings
+2. **Temperature**: Adjust based on your filament (PLA: 200-220°C, PETG: 230-250°C)
+3. **Bed Temperature**: PLA: 60°C, PETG: 80°C, ABS: 100°C
+4. **Retraction**: Direct drive typically needs 0.5-1.5mm retraction at 40-60mm/s
+5. **Layer Height**: For 0.8mm nozzle, use 0.3-0.5mm layer height for best results
+
+## Troubleshooting
+
+### Connection Issues
+- Verify Mainsail is accessible in browser: `http://10.1.51.31` or `http://10.1.51.32`
+- Check firewall settings
+- Ensure Moonraker API is enabled
+
+### Print Quality Issues
+- Adjust layer height (try 0.3mm for finer detail)
+- Reduce speed for better quality
+- Increase infill for stronger parts
+- Check bed leveling in Mainsail
+
+### G-code Errors
+- Verify macros exist in `printer.cfg`
+- Check Mainsail console for error messages
+- Ensure bed mesh is calibrated
+
+## Files
+
+- `Printer-1.json` - Machine profile for Printer 1
+- `Printer-2.json` - Machine profile for Printer 2
+- `0.8mm_Printer-1.json` - Print process profile for Printer 1
+- `0.8mm_Printer-2.json` - Print process profile for Printer 2
