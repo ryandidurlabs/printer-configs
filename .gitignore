@@ -23,6 +23,11 @@ logs/
 *.tmp
 temp/
 
+# SSH output files
+ssh_error.txt
+ssh_output.txt
+*.txt.bak
+
 # Python cache (if any scripts use Python)
 __pycache__/
 *.pyc
