@@ -103,9 +103,47 @@ These macros handle:
 - Check Mainsail console for error messages
 - Ensure bed mesh is calibrated
 
+## Material Profiles
+
+### Creality CR-PETG Profiles
+
+Optimized material profiles for Creality CR-PETG with 0.8mm nozzle:
+
+- **CR-PETG_White.json** - White PETG filament profile
+- **CR-PETG_Black.json** - Black PETG filament profile
+- **CR-PETG_0.8mm_Print_Settings.json** - Print settings optimized for PETG
+
+#### PETG Settings Summary:
+- **Nozzle Temperature**: 240°C (245°C first layer)
+- **Bed Temperature**: 80°C (85°C first layer)
+- **Fan Speed**: 10-30% (lower for better layer adhesion)
+- **Retraction**: 0.8mm @ 50mm/s (direct drive)
+- **Print Speed**: 50-60mm/s (walls), 40mm/s (top surface)
+- **Layer Height**: 0.4mm (0.3mm first layer)
+- **Infill**: 20% (gyroid pattern recommended)
+- **Brim**: 8mm (recommended for better adhesion)
+
+#### Importing Material Profiles:
+
+1. Open OrcaSlicer
+2. Go to **Filament** → **Add Filament** → **Import**
+3. Select `CR-PETG_White.json` or `CR-PETG_Black.json`
+4. The print settings profile will be automatically linked
+
+#### Tips for PETG:
+- Use brim (8mm) for better bed adhesion
+- Lower fan speeds (10-30%) improve layer bonding
+- Higher bed temp (80-85°C) prevents warping
+- Slower speeds (50-60mm/s) improve quality
+- Gyroid infill works well with PETG
+- Use ironing on top surfaces for smooth finish
+
 ## Files
 
 - `Printer-1.json` - Machine profile for Printer 1
 - `Printer-2.json` - Machine profile for Printer 2
 - `0.8mm_Printer-1.json` - Print process profile for Printer 1
 - `0.8mm_Printer-2.json` - Print process profile for Printer 2
+- `CR-PETG_White.json` - White PETG material profile
+- `CR-PETG_Black.json` - Black PETG material profile
+- `CR-PETG_0.8mm_Print_Settings.json` - PETG print settings
