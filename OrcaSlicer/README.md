@@ -15,15 +15,15 @@ Both printers are modified Creality CR-10S with:
 
 ## Installation Instructions
 
-### Method 1: Import via OrcaSlicer UI (Recommended)
+**📖 For detailed step-by-step instructions, see [SETUP_GUIDE.md](SETUP_GUIDE.md)**
+
+### Quick Start: Import via OrcaSlicer UI
 
 1. Open OrcaSlicer
-2. Go to **Printer** → **Add Printer** → **Add**
-3. Click **Import** button
-4. Navigate to this `OrcaSlicer` folder
-5. Select `Printer-1.json` or `Printer-2.json`
-6. Click **Open**
-7. Repeat for the second printer
+2. **Printer Profiles**: Click printer dropdown → **Add Printer** → **Import** → Select `Printer-1.json` or `Printer-2.json`
+3. **Material Profiles**: Click filament dropdown → **Add** → **Import** → Select `CR-PETG_White.json` or `CR-PETG_Black.json`
+4. **Print Settings**: Click process dropdown → **Add** → **Import** → Select `0.8mm_Printer-1.json` or `0.8mm_Printer-2.json`
+5. **Configure Mainsail**: Printer Settings → Machine tab → Set Host Type to `Mainsail` → Enter IP (10.1.51.31 or 10.1.51.32)
 
 ### Method 2: Manual Copy (Advanced)
 
