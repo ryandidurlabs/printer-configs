@@ -4,6 +4,8 @@
   "from": "user",
   "instantiation": "true",
   "inherits": "fdm_machine_common",
+  "printer_model": "CR-10S",
+  "nozzle_diameter": ["0.8"],
   "printer_notes": "Modified CR-10S with direct drive and 0.8mm nozzle. Running Klipper/MainsailOS.",
   "default_print_profile": "0.8mm @Printer-1",
   "gcode_flavor": "klipper",
