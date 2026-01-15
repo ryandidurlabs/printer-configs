@@ -42,6 +42,7 @@
   "filament_z_hop_types": "Normal Lift",
   "filament_wipe": "1",
   "filament_wipe_distance": "3",
+  "setting_id": "CR-PETG White",
   "filament_settings_id": "CR-PETG White",
   "filament_notes": "Creality CR-PETG White - Optimized for 0.8mm nozzle with direct drive.",
   "required_nozzle_HRC": "0",

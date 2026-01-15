@@ -31,7 +31,10 @@
     "0x300"
   ],
   "printable_height": "400",
+  "setting_id": "Printer-2",
   "printer_settings_id": "Printer-2",
+  "printer_model": "CR-10S",
+  "nozzle_diameter": ["0.8"],
   "retraction_minimum_travel": "1.5",
   "retraction_speed": "60",
   "use_firmware_retraction": "0",
