@@ -2,6 +2,46 @@
 
 This guide will walk you through importing and using the printer and material profiles for your CR-10S printers.
 
+## Quick Setup: Use the Sync Script (Easiest!)
+
+**🚀 Fastest Method**: Use the provided sync script to automatically copy all profiles:
+
+### Windows (PowerShell):
+```powershell
+cd OrcaSlicer
+.\sync-profiles.ps1
+```
+
+To overwrite existing profiles:
+```powershell
+.\sync-profiles.ps1 -Force
+```
+
+### Mac/Linux (Bash):
+```bash
+cd OrcaSlicer
+chmod +x sync-profiles.sh
+./sync-profiles.sh
+```
+
+To overwrite existing profiles:
+```bash
+./sync-profiles.sh --force
+```
+
+The script will:
+- ✅ Automatically find your OrcaSlicer installation
+- ✅ Copy all printer profiles
+- ✅ Copy all material profiles  
+- ✅ Copy all print settings
+- ✅ Create directories if needed
+
+**Then just restart OrcaSlicer and the profiles will be available!**
+
+---
+
+## Manual Setup (If you prefer)
+
 ## Step 1: Download the Profiles
 
 1. Make sure you have the latest profiles from GitHub
