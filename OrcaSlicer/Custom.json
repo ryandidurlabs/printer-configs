@@ -1,0 +1,39 @@
+{
+  "name": "Custom Printer",
+  "version": "01.00.00.00",
+  "description": "Custom CR-10S printer profiles with 0.8mm nozzle",
+  "machine_list": [
+    {
+      "name": "CR-10S Printer 1 (0.8mm)",
+      "sub_path": "machine/CR-10S Printer 1 (0.8mm).json"
+    },
+    {
+      "name": "CR-10S Printer 2 (0.8mm)",
+      "sub_path": "machine/CR-10S Printer 2 (0.8mm).json"
+    }
+  ],
+  "filament_list": [
+    {
+      "name": "Creality CR-PETG White @0.8mm",
+      "sub_path": "filament/Creality CR-PETG White @0.8mm.json"
+    },
+    {
+      "name": "Creality CR-PETG Black @0.8mm",
+      "sub_path": "filament/Creality CR-PETG Black @0.8mm.json"
+    }
+  ],
+  "process_list": [
+    {
+      "name": "0.8mm @Printer-1",
+      "sub_path": "process/0.8mm @Printer-1.json"
+    },
+    {
+      "name": "0.8mm @Printer-2",
+      "sub_path": "process/0.8mm @Printer-2.json"
+    },
+    {
+      "name": "CR-PETG 0.8mm Print Settings",
+      "sub_path": "process/CR-PETG 0.8mm Print Settings.json"
+    }
+  ]
+}
