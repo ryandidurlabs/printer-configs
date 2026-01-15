@@ -8,7 +8,7 @@ If the sync script isn't working, use OrcaSlicer's built-in import function:
 
 2. **For Printer Profiles:**
    - Go to **File → Import → Import Configs...**
-   - OR click the **Printer dropdown** → **Add Printer** → **Import**
+   - OR click the **Printer dropdown** → **Create Printer** → **Import** (or look for Import option)
    - Select `Printer-1.json` or `Printer-2.json`
    - Click **Open**
 
