@@ -1,7 +1,7 @@
 {
   "type": "process",
   "name": "0.8mm @Printer-1",
-  "from": "system",
+  "from": "user",
   "instantiation": "true",
   "inherits": "0.8mm Standard @Creality",
   "compatible_printers": [

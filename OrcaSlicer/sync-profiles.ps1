@@ -57,10 +57,30 @@ if (-not $OrcaSlicerConfig) {
     exit 1
 }
 
-# Define profile directories
-$MachineDir = Join-Path $OrcaSlicerConfig "resources\profiles\machine"
-$ProcessDir = Join-Path $OrcaSlicerConfig "resources\profiles\process"
-$FilamentDir = Join-Path $OrcaSlicerConfig "resources\profiles\filament"
+# Find user folder (could be "default" or a number/ID)
+$UserBaseDir = Join-Path $OrcaSlicerConfig "user"
+$UserFolder = $null
+
+if (Test-Path $UserBaseDir) {
+    $UserFolders = Get-ChildItem $UserBaseDir -Directory
+    if ($UserFolders.Count -gt 0) {
+        # Use first user folder found (usually "default" or a number)
+        $UserFolder = $UserFolders[0].FullName
+        Write-Host "Found user folder: $UserFolder" -ForegroundColor Green
+    }
+}
+
+if (-not $UserFolder) {
+    # Create default user folder if it doesn't exist
+    $UserFolder = Join-Path $UserBaseDir "default"
+    Write-Host "Creating default user folder: $UserFolder" -ForegroundColor Yellow
+    New-Item -ItemType Directory -Force -Path $UserFolder | Out-Null
+}
+
+# Define profile directories (in user folder, not resources)
+$MachineDir = Join-Path $UserFolder "machine"
+$ProcessDir = Join-Path $UserFolder "process"
+$FilamentDir = Join-Path $UserFolder "filament"
 
 # Create directories if they don't exist
 Write-Host "`nCreating profile directories if needed..." -ForegroundColor Cyan

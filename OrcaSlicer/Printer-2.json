@@ -1,7 +1,7 @@
 {
   "type": "machine",
   "name": "CR-10S Printer 2 (0.8mm)",
-  "from": "system",
+  "from": "user",
   "instantiation": "true",
   "inherits": "fdm_machine_common",
   "printer_notes": "Modified CR-10S with direct drive and 0.8mm nozzle. Running Klipper/MainsailOS.",
