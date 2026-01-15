@@ -32,8 +32,8 @@
       "sub_path": "process/0.8mm @Printer-2.json"
     },
     {
-      "name": "CR-PETG 0.8mm Print Settings",
-      "sub_path": "process/CR-PETG 0.8mm Print Settings.json"
+      "name": "CR-PETG @0.8mm",
+      "sub_path": "process/CR-PETG @0.8mm.json"
     }
   ]
 }
