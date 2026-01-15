@@ -33,6 +33,7 @@
     "0x300"
   ],
   "printable_height": "400",
+  "setting_id": "Printer-1",
   "printer_settings_id": "Printer-1",
   "retraction_minimum_travel": "1.5",
   "retraction_speed": "60",
