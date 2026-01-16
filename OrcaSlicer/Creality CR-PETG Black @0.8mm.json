@@ -1,7 +1,7 @@
 {
   "type": "filament",
   "name": "Creality CR-PETG Black @0.8mm",
-  "from": "user",
+  "from": "system",
   "instantiation": "true",
   "inherits": "Generic PETG @Creality",
   "compatible_printers": [

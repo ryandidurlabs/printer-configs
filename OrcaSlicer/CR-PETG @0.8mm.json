@@ -1,7 +1,7 @@
 {
   "type": "process",
   "name": "CR-PETG @0.8mm",
-  "from": "user",
+  "from": "system",
   "instantiation": "true",
   "inherits": "0.8mm Standard @Creality",
   "compatible_printers": [
